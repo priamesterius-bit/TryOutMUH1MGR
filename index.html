@@ -365,32 +365,35 @@
 
             <!-- 2. PERINGKAT (FITUR BARU) -->
             <section id="peringkat" class="section">
-                <div class="card">
-                    <div class="card-header">
-                        <h3>Peringkat Peserta</h3>
-                        <button onclick="loadPeringkat()" class="btn-outline" style="font-size: 0.9rem; padding: 8px 15px;">
-                            ↻ Update Data
-                        </button>
-                    </div>
-                    
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th width="15%">Peringkat</th>
-                                    <th width="40%">Nama Peserta</th>
-                                    <th width="25%">Sekolah</th>
-                                    <th width="20%">Total Skor</th>
-                                </tr>
-                            </thead>
-                            <tbody id="rankTableBody">
-                                <tr><td colspan="4" style="text-align:center;">Memuat data peringkat...</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
+    <div class="card">
+        <div class="card-header">
+            <div style="text-align:left; width: 100%;">
+                <h3>Peringkat & Rekap Nilai</h3>
+                <p style="font-size: 0.85rem; color:var(--text-muted);">Urutan berdasarkan Total Skor tertinggi.</p>
+            </div>
+            <button onclick="loadPeringkat()" class="btn-outline">↻ Update Data</button>
+        </div>
+        
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th width="5%">Rank</th>
+                        <th width="25%">Nama Siswa</th>
+                        <th width="15%">Sekolah</th>
+                        <th width="10%">B. Indo</th>
+                        <th width="10%">MTK</th>
+                        <th width="10%">IPA</th>
+                        <th width="10%">Total</th>
+                    </tr>
+                </thead>
+                <tbody id="rankTableBody">
+                    <tr><td colspan="8" style="text-align:center;">Memuat data...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
             <!-- 2. SOAL & JAWABAN (GOOGLE DRIVE) -->
             <section id="soal" class="section">
                 <div class="card">
@@ -445,7 +448,7 @@
     <script>
         // --- KONFIGURASI ---
         // PASTE URL WEB APP GOOGLE SCRIPT (DARI DEPLOY TADI) DI SINI
-        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzS7oVzHqu8g8eqZQPNAG4dbYYnj-UtGKUyRhK3aOamAwkruYI0eyYc1gReIcsKfEkj/exec'; 
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwd5-tNQVD9XtZsH9uqisU5gp72D9BpC4J2_8WkGl3lDMoaytXKqK46so-WlmvTRZWw/exec'; 
 
         // --- 1. NAVIGASI ---
         function switchTab(id, el) {
@@ -534,4 +537,5 @@
         }
     </script>
 </body>
+
 </html>
